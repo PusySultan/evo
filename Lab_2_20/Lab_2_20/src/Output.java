@@ -1,7 +1,7 @@
 import java.util.HashMap;
 import java.util.Map;
 
-public class Outout
+public class Output
 {
     public static void Output(int[] array)
     {
@@ -34,7 +34,7 @@ public class Outout
         for (Map.Entry<Integer, Integer> item : dublicate.entrySet())
         {
             System.out.println("Число " + item.getKey() + " встречается: "
-                                + item.getValue() + " раза");
+                    + item.getValue() + " раза");
         }
     }
 

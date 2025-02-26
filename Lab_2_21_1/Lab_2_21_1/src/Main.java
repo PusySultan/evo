@@ -25,9 +25,10 @@ public class Main
         int startIndex = 0;
         int counter = 0;
 
-        while ((startIndex = line.indexOf(subLine, startIndex)) != -1) {
-            counter++;
+        while ((startIndex = line.indexOf(subLine, startIndex)) != -1)
+        {
             startIndex += subLine.length();
+            counter++;
         }
 
         System.out.println("Подстрока " + subLine + " встречается " + counter + " раза");

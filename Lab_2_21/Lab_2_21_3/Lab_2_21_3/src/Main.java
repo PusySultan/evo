@@ -1,5 +1,3 @@
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.Scanner;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -8,25 +6,14 @@ public class Main
 {
     public static void main(String[] args)
     {
+        DateParse dp =null;
         Scanner sc = new Scanner(System.in);
-        Date date = new Date();
-
-        SimpleDateFormat inputDatePattern = new SimpleDateFormat("dd.MM.yyyy");
-        SimpleDateFormat outputDatePattern = new SimpleDateFormat("yyyy-MM-dd");
-
-        String line = "";
+        String date = "";
 
         System.out.println("Введите дату в формате 'дд.мм.гггг'");
-        line = sc.nextLine();
+        date = sc.nextLine();
 
-        try
-        {
-            date = inputDatePattern.parse(line);
-            System.out.println(outputDatePattern.format(date));
-        }
-        catch (Exception ex)
-        {
-            System.out.println(ex.getMessage());
-        }
+        dp = new DateParse(date);
+        dp.GetOutputdate();
     }
 }

@@ -2,8 +2,6 @@ import java.util.Scanner;
 
 public class Reader
 {
-    private static int counter = 1;
-
     public static int SetValue(int value)
     {
         boolean erroFlag = false;
@@ -14,7 +12,6 @@ public class Reader
        {
            try
            {
-               System.out.print("Enter " + counter + " value: ");
                value = sc.nextInt();
 
                erroFlag = false;
@@ -29,7 +26,6 @@ public class Reader
 
        } while (erroFlag);
 
-        counter++;
         return value;
     }
 
@@ -37,16 +33,15 @@ public class Reader
     {
         double res = (double) a / (double) b;
 
-        System.out.println("\nOutput: ");
         DivideBy5(a, b, c);
-        System.out.println("Dividng a by b = " + a / b + " whole value");
-        System.out.println("Dividng a by b = " + res + " fractional value");
-        System.out.println("Dividng a by b = " + (int) Math.ceil(res) + " rounding up");
-        System.out.println("Dividng a by b = " + (int) Math.floor(res) + " rounding down");
-        System.out.println("Dividng a by b = " + (int) Math.round(res) + " rounding math");
-        System.out.println("Remains of dividing b by c  = " + b % c);
-        System.out.println("Min value of " + a + " and " + b + " = " + Math.min(a, b));
-        System.out.println("Max value of " + b + " and " + c + " = " + Math.max(b, c));
+        System.out.println("Результат целочисленного деления a на b: " + a / b);
+        System.out.println("Результат деления a на b: " + res);
+        System.out.println("Результат деления a на b с округлением в большую сторону: " + (int) Math.ceil(res));
+        System.out.println("Результат деления a на b с округлением в меньшую сторону: " + (int) Math.floor(res));
+        System.out.println("Результат деления a на b с математическим округлением: " + (int) Math.round(res));
+        System.out.println("Остаток от деления b на c: " + b % c);
+        System.out.println("Наименьшее значение из a и b: " + Math.min(a, b));
+        System.out.println("Наибольшее значение из b и c: " + Math.max(b, c));
     }
 
     private static void DivideBy5(int a, int b ,int c)

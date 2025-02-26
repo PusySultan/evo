@@ -1,3 +1,5 @@
+import java.io.Console;
+
 public class Main
 {
     public static void main(String[] args)
@@ -6,6 +8,7 @@ public class Main
             b = 0,
             c = 0;
 
+        System.out.println("Введите 3 числа");
         a = Reader.SetValue(a);
         b = Reader.SetValue(b);
         c = Reader.SetValue(c);

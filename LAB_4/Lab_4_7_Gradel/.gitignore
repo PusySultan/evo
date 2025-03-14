@@ -30,3 +30,9 @@ out/
 ### System files ###
 .DS_Store
 Thumbs.db
+
+# Default ignored files
+/shelf/
+/workspace.xml
+
+.gitignore
